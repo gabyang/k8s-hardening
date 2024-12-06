@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>List of Code Submissions</title></head>
+<body>
+<h1>All Submissions ({{ count }})</h1>
+<table border="1" cellpadding="5">
+<tr><th>ID</th><th>Language</th><th>Status</th><th>Date Submitted</th><th>Date Completed</th></tr>
+{% for item in items %}
+<tr>
+  <td><a href="/get-code/{{ item.ID }}">{{ item.ID }}</a></td>
+  <td>{{ item.Language }}</td>
+  <td>{{ item.Status }}</td>
+  <td>{{ item.SubmittedTime }}</td>
+  <td>{{ item.CompletedTime if item.CompletedTime else "" }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
