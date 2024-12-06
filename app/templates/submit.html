@@ -1,0 +1,22 @@
+<!-- app/templates/submit.html -->
+<!DOCTYPE html>
+<html>
+<head><title>Submit Code</title></head>
+<body>
+<h1>Submit Your Code</h1>
+<form action="/submit-code" method="post">
+  <label>Language:
+    <select name="language">
+      <option value="python">Python</option>
+      <option value="golang">Go</option>
+      <option value="javascript">JavaScript</option>
+      <option value="ruby">Ruby</option>
+    </select>
+  </label><br><br>
+  <label>Code:<br>
+    <textarea name="code" rows="10" cols="50"></textarea>
+  </label><br><br>
+  <input type="submit" value="Submit Code">
+</form>
+</body>
+</html>
